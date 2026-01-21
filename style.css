@@ -1,0 +1,108 @@
+/*
+ Theme Name:   Storely Child
+ Theme URI:    http://localhost/ecommerce-rede-software/storely-child
+ Description:  Child theme for Storely
+ Author:       Your Name
+ Author URI:   http://localhost/ecommerce-rede-software
+ Template:     tema_storely
+ Version:      1.0.0
+ Text Domain:  storely-child
+*/
+
+:root {
+    --bs-primary: #d40000;
+    --bs-danger: #d40000;
+}
+
+/* Permite que o footer fique sempre no final da página, independente do conteúdo da página*/
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-section {
+	margin-top: auto;
+}
+
+/* ------------------------------------------------------------ */
+
+/* Retira a caixa de seleção de categorias logo após a barra de pesquisa */
+.header-search-select {
+	display: none !important;
+}
+
+/* ------------------------------------------------------------ */
+
+/* Remove animação da imagem ao passar o mouse */
+.woocommerce ul.products li.product img {
+    transition: none !important;
+    transform: none !important;
+}
+
+/* Remove qualquer efeito hover do container */
+.woocommerce ul.products li.product:hover img {
+    transform: none !important;
+}
+
+/* Remove overlay de hover invisível */
+.woocommerce ul.products li.product .overlay,
+.woocommerce ul.products li.product::before {
+    display: none !important;
+}
+
+/* Aumenta a largura máxima do site */
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    max-width: 1400px; /* ajuste esse valor */
+}
+
+/* Remove padding lateral exagerado */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+/* trocar botão dos 3 pontinhos pelo cart */
+@media (max-width: 768px) {
+
+  /* Remove o ícone original */
+  .header-above-collapse span,
+  .header-above-collapse span::before,
+  .header-above-collapse span::after {
+    display: none !important;
+  }
+
+  /* Botão */
+  .header-above-collapse {
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Ícone do carrinho */
+  .header-above-collapse::before {
+    content: "\f07a"; /* carrinho */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    color: #e30613; /* vermelho do seu site */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+
