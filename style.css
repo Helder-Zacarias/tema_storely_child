@@ -37,7 +37,9 @@ body {
 	display: none !important;
 }
 
-/* ------------------------------------------------------------ */
+.breadcrumb-area {
+	display: none;
+}
 
 /* Remove animação da imagem ao passar o mouse */
 .woocommerce ul.products li.product img {
