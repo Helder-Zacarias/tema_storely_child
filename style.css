@@ -41,6 +41,10 @@ body {
 	display: none;
 }
 
+.woocommerce-MyAccount-navigation-link a {
+	text-decoration: none !important;
+}
+
 /* Remove animação da imagem ao passar o mouse */
 .woocommerce ul.products li.product img {
     transition: none !important;
