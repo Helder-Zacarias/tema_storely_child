@@ -134,9 +134,12 @@ h3.elementor-heading-title {
 	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
 }
 
-/* Alterar a cor do botão "Ver Produtos" na Home */
+/* Alterar a cor do botão "Ver Produtos" na Home 
+ * Altera margens top e bottom*/
 a.elementor-button {
 	background-color: var(--bs-primary) !important;
+	margin-top: 40px;
+	margin-bottom: 56px;
 }
 
 /* Remove animação da imagem ao passar o mouse */
