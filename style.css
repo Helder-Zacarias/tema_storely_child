@@ -119,14 +119,13 @@ div.product-single-ready {
 /* ------------------------------------------------------------ */
 
 /* Altera a cor dos headings na home
- * Adiciona underline no heading */
+ * Altera espaçamento entre as letras, tamanho e peso da fonte */
 h3.elementor-heading-title {
 	color: var(--bs-primary) !important;
-	width: fit-content;
-	text-decoration: underline;
-	text-decoration-thickness: 5px;
-	text-decoration-color: var(--bs-primary);
-	text-underline-position: under;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	font-size: 0.95em;
 }
 
 /* Adicona borda e box-shadow ao carde de produtos na Home  */
