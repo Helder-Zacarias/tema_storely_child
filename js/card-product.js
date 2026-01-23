@@ -1,3 +1,4 @@
+// Remove a descrição do produto no card de produto
 document.addEventListener('DOMContentLoaded', () => {
 	const productContentCollection = document.getElementsByClassName("product-content");
 	
@@ -9,3 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 });
+
+// Adiciona dinamicamente uma classe a div do carde  produto
+// Evita FOUC (Flash of Unstyled Content)
+window.addEventListener('load', () => {
+	const productSingleCollection = document.getElementsByClassName("product-single");
+	
+	for(const productSingle of productSingleCollection) {
+		productSingle.classList.add("product-single-ready");
+	}
+})
