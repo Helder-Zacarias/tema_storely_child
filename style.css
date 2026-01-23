@@ -12,6 +12,15 @@
 :root {
 	--bs-primary:  #C81D1D;
     --bs-danger: #d40000;
+	
+	--secondary: #FF6B6B;
+	--neutral-dark: #5A5A5A;
+	--neutral-medium: #7D7D7D;
+	--neutral-light: #EAEAEA;
+	--neutral-white: #FFFFFF;
+	--accent-warm: #FFC107;
+	--accent-secondary: #2196F3;
+	--accent-sucess: #4CAF50;
 }
 
 /* Permite que o footer fique sempre no final da página, independente do conteúdo da página*/
@@ -108,6 +117,11 @@ div.product-single-ready {
 }
 
 /* ------------------------------------------------------------ */
+
+/* Altera a cor dos headings na home  */
+h3.elementor-heading-title {
+	color: var(--neutral-dark) !important;
+}
 
 /* Remove animação da imagem ao passar o mouse */
 .woocommerce ul.products li.product img {
