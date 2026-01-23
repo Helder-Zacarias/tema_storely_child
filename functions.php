@@ -9,4 +9,17 @@ function storely_child_enqueue_styles() {
         filemtime(get_stylesheet_directory() . '/style.css')
     );
 }
+
+function storely_child_enqueue_scripts() {
+	if(is_shop()) {
+		wp_enqueue_script(
+			'card-product-js',
+			get_stylesheet_directory_uri() . '/js/card-product.js',
+			[],
+			'1.0',
+			true);
+	}
+}
+
 add_action('wp_enqueue_scripts', 'storely_child_enqueue_styles', 20);
+add_action('wp_enqueue_scripts', 'storely_child_enqueue_scripts');

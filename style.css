@@ -41,9 +41,42 @@ body {
 	display: none;
 }
 
+/* Retira a linha sublinhada dos links na página Minha Conta */
 .woocommerce-MyAccount-navigation-link a {
 	text-decoration: none !important;
 }
+
+/* Estilização dos ícones e botão no card de produto */
+
+.product-action .se-btn {
+	background-color: white;
+}
+
+.product-action .se-btn i {
+	color: #333;
+}
+
+.product-action .se-btn .shopengine-icon-add_to_favourite_1 {
+	color: red;
+}
+
+.product-action .shopengine-wishlist {
+	text-align: center;
+}
+
+.product-action .add_to_cart_button {
+	width: 150px !important;
+	border-radius: 5px !important;
+	color: #333 !important;
+}
+
+.product-action .add_to_cart_button:hover {
+	border-radius: 5px !important;
+	background-color: var(--bs-primary) !important;
+	color: white !important; 
+}
+
+/* ------------------------------------------------------------ */
 
 /* Remove animação da imagem ao passar o mouse */
 .woocommerce ul.products li.product img {
