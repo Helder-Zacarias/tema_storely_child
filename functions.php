@@ -5,7 +5,7 @@ function storely_child_enqueue_styles() {
 	 wp_enqueue_style(
 		'child-style',
         get_stylesheet_uri(),
-        ['storely-parent-stylestyle'], // Carrega primeiro o estilo do tema pai, depois o tema filho
+        ['storely-parent-style'], // Carrega primeiro o estilo do tema pai, depois o tema filho
         filemtime(get_stylesheet_directory() . '/style.css')
     );
 }

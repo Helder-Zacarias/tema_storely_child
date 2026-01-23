@@ -10,7 +10,7 @@
 */
 
 :root {
-    --bs-primary: #d40000;
+	--bs-primary:  #C81D1D;
     --bs-danger: #d40000;
 }
 
@@ -24,6 +24,7 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+	background-color: #FAFAFB;
 }
 
 .footer-section {
@@ -77,6 +78,13 @@ body {
 }
 
 /* ------------------------------------------------------------ */
+
+/* Adiciona box-shadow nos cards de produto */
+
+div.product-single {
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
+}
 
 /* Remove animação da imagem ao passar o mouse */
 .woocommerce ul.products li.product img {
