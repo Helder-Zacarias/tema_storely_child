@@ -20,7 +20,7 @@
 	--neutral-white: #FFFFFF;
 	--accent-warm: #FFC107;
 	--accent-secondary: #2196F3;
-	--accent-sucess: #4CAF50;
+	--accent-success: #4CAF50;
 }
 
 /* Permite que o footer fique sempre no final da página, independente do conteúdo da página*/
@@ -128,6 +128,11 @@ h3.elementor-heading-title {
 .shopengine-single-product-item {
 	border: 1px solid var(--neutral-light) !important;
 	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
+}
+
+/* Alterar a cor do botão "Ver Produtos" na Home */
+a.elementor-button {
+	background-color: var(--bs-primary) !important;
 }
 
 /* Remove animação da imagem ao passar o mouse */
