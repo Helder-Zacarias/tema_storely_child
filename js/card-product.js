@@ -10,10 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	}
-	
-	const producct = document.querySelectorAll("div.product-single").forEach((product) => {
-// 		product.style.border = "1px solid red";
-	});
 });
 
 // Adiciona dinamicamente uma classe a div do card de produto

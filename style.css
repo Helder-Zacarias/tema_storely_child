@@ -12,6 +12,7 @@
 :root {
 	--bs-primary:  #C81D1D;
     --bs-danger: #d40000;
+	--neutral-background: #FAFAFB;
 	
 	--secondary: #FF6B6B;
 	--neutral-dark: #5A5A5A;
@@ -33,7 +34,7 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	background-color: #FAFAFB;
+	background-color: var(--neutral-background);
 }
 
 .footer-section {
@@ -150,6 +151,72 @@ a.elementor-button {
 header#main-header {
 	margin-bottom: 48px;
 	background-color: var(--neutral-light);
+}
+
+/* Altera display da table de informações do produto*/
+
+table.variations {
+	display: flex !important;
+	justify-content: space-between;
+	align-items: center;
+}
+
+table.variations th.label {
+	display: inline !important;
+	white-space: nowrap !important;
+	padding: 0 !important;
+	margin-right: 0.5rem;
+}
+
+table.variations select {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	display: block !important;
+	flex: 1;
+}
+/* ------------------------------------------------------------ */
+
+/* Altera display da div de ações a página do produto */
+form.cart, div.woocommerce-variation-add-to-cart {
+	display: inline-flex !important;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+form.variations_form {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: flex-start;
+}
+
+form.cart .single_add_to_cart_button {
+	margin: 0 !important;
+}
+
+form.cart .quantity {
+	order: 0;
+	margin: 0 !important;
+}
+/* ------------------------------------------------------------ */
+
+/* Altera cores dos botões de ações da páginda de produtos */
+button.shopengine-wishlist, a.shopengine-comparison {
+	border: none;
+	background-color: var(--neutral-background);
+	color: var(--bs-primary);
+	margin: 0 !important;
+	order: 1;
+	font-size: 1rem;
+}
+/* ------------------------------------------------------------ */
+
+/* Altera heading da página Loja */
+.page-title {
+	font-size: 3rem;
+	font-weight: 600;
+	color: var(--bs-primary);
+    margin-bottom: 0;
+	text-transform: uppercase;
 }
 
 /* Remove animação da imagem ao passar o mouse */
