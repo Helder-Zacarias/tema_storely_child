@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 });
 
-// Adiciona dinamicamente uma classe a div do carde  produto
+// Adiciona dinamicamente uma classe a div do card de produto
 // Evita FOUC (Flash of Unstyled Content)
 window.addEventListener('load', () => {
 	const productSingleCollection = document.getElementsByClassName("product-single");

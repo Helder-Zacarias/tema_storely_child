@@ -11,6 +11,13 @@ function storely_child_enqueue_styles() {
 }
 
 function storely_child_enqueue_scripts() {
+	wp_enqueue_script(
+		'traducao-js',
+		get_stylesheet_directory_uri() . '/js/traducao.js',
+		[],
+		'1.0',
+		true);
+	
 	if(is_shop()) {
 		wp_enqueue_script(
 			'card-product-js',
