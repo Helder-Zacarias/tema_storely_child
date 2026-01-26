@@ -219,6 +219,20 @@ button.shopengine-wishlist, a.shopengine-comparison {
 	text-transform: uppercase;
 }
 
+/* Adiciona background e box-shadow às informações do produto */
+div.summary {
+	border: 1px solid var(--neutral-light);
+	background-color: var(--neutral-white);
+	border-radius: 5px;
+	padding: 2rem !important;
+	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
+}
+
+/* Justifica o descrição do produto */
+div.woocommerce-product-details__short-description p {
+	text-align: justify !important;
+}
+
 /* Remove animação da imagem ao passar o mouse */
 .woocommerce ul.products li.product img {
     transition: none !important;
