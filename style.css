@@ -148,13 +148,16 @@ a.elementor-button {
 }
 
 /* Altera a margin-bottom e cor do header */
-header#main-header {
+header#main-header, div.main-mobile-nav {
 	margin-bottom: 48px;
-	background-color: var(--neutral-light);
+	background-color: var(--neutral-light) !important;
+}
+
+div.main-mobile-menu .container {
+	border: 0;
 }
 
 /* Altera display da table de informações do produto*/
-
 table.variations {
 	display: flex !important;
 	justify-content: space-between;
@@ -174,6 +177,13 @@ table.variations select {
 	display: block !important;
 	flex: 1;
 }
+
+/* Altera cor e peso da fonte do preço do produtop */
+bdi  {
+	color: var(--accent-success) !important;
+	font-weight: 600;
+}
+
 /* ------------------------------------------------------------ */
 
 /* Altera display da div de ações a página do produto */
@@ -207,6 +217,63 @@ button.shopengine-wishlist, a.shopengine-comparison {
 	margin: 0 !important;
 	order: 1;
 	font-size: 1rem;
+}
+/* ------------------------------------------------------------ */
+
+/* Estilização da table de produtos no carrinho */
+div.wc-block-components-main {
+	background-color: var(--neutral-white);
+	border: 1px solid var(--neutral-light);
+	border-radius: 5px;
+}
+
+table.wc-block-cart-items {
+	margin-top: 1rem !important;
+}
+
+div.wc-block-components-main {
+	padding-left: 1.5rem !important;
+	padding-right: 1rem !important;
+}
+
+table.wc-block-cart-items tr.wc-block-cart-items__header {
+	margin-bottom: 2rem !important;
+	background-color !important;
+}
+
+th.wc-block-cart-items__header-image span {
+	font-size: 1.5rem;
+	color: var(--neutral-dark);
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+}
+
+th.wc-block-cart-items__header-total span {
+	font-size: 1rem;
+	letter-spacing: 0.1rem;
+	color: var(--neutral-medium);
+	padding-right: 0 !important;
+}
+
+a.wc-block-components-product-name {
+	color: var(--accent-success);
+	font-weight: bold;
+	font-size: 1.25rem !important;
+	letter-spacing: 0.1rem !important;
+}
+
+div.wc-block-cart-item__wrap a.wc-block-components-product-name:hover {
+	text-decoration: underline !important:
+}
+
+td.wc-block-cart-item__total span.wc-block-formatted-money-amount {
+	font-size: 1.1rem;
+	font-weight: normal;
+	font-weight: 600;
+}
+
+button.wc-block-cart-item__remove-link {
+	color: var(--bs-danger) !important;
 }
 /* ------------------------------------------------------------ */
 
