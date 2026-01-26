@@ -94,7 +94,6 @@ body {
 
 /* Adiciona box-shadow nos cards de produto
  * Define altura máxima para os cards */
-
 div.product-single {
 	display: flex !important;
 	flex-direction: column;
@@ -128,22 +127,29 @@ h3.elementor-heading-title {
 	font-size: 0.95em;
 }
 
-/* Adicona borda e box-shadow ao carde de produtos na Home  */
+/* Adicona borda e box-shadow ao card de produtos na Home  */
 .shopengine-single-product-item {
 	border: 1px solid var(--neutral-light) !important;
 	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
 }
 
 /* Alterar a cor do botão "Ver Produtos" na Home 
- * Altera margens top e bottom*/
+ * Altera margens top e bottom */
 a.elementor-button {
 	background-color: var(--bs-primary) !important;
 	margin-top: 40px;
 	margin-bottom: 56px;
 }
 
+/* Remove a visibilidade do botão de busca de categorias */
 .product-category-btn {
     visibility: hidden;
+}
+
+/* Altera a margin-bottom e cor do header */
+header#main-header {
+	margin-bottom: 48px;
+	background-color: var(--neutral-light);
 }
 
 /* Remove animação da imagem ao passar o mouse */

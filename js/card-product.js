@@ -1,6 +1,7 @@
 // Remove a descrição do produto no card de produto
 document.addEventListener('DOMContentLoaded', () => {
 	const productContentCollection = document.getElementsByClassName("product-content");
+	console.log(productContentCollection);
 	
 	for(const productContent of productContentCollection) {
 		for(const node of productContent.childNodes) {
@@ -9,6 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	}
+	
+	const producct = document.querySelectorAll("div.product-single").forEach((product) => {
+// 		product.style.border = "1px solid red";
+	});
 });
 
 // Adiciona dinamicamente uma classe a div do card de produto
