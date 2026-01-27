@@ -21,50 +21,48 @@
 	--neutral-white: #FFFFFF;
 	--accent-success: #4CAF50;
 	
+	/* =========================
+    60% – Base / Neutral
+    ========================= */
+	--color-bg-main: #F6F6F6;      /* Page background */
+	--color-bg-surface: #FFFFFF;  /* Cards, modals, product boxes */
+	--color-border-light: #E5E5E5;
 	
-	  /* =========================
-     60% – Base / Neutral
-     ========================= */
-  --color-bg-main: #F6F6F6;      /* Page background */
-  --color-bg-surface: #FFFFFF;  /* Cards, modals, product boxes */
-  --color-border-light: #E5E5E5;
-
-  /* =========================
-     30% – Brand (Red)
-     ========================= */
-  --color-brand: #C81D1D;
-  --color-brand-hover: #B51A1A;
-  --color-brand-active: #9E1616;
-  --color-brand-soft: rgba(200, 29, 29, 0.08);
-
-  /* =========================
-     10% – Accent (CTA)
-     ========================= */
-  --color-accent: #F2A900;
-  --color-accent-hover: #D99600;
-  --color-accent-active: #BF8600;
-
-  /* =========================
-     Text
-     ========================= */
-  --color-text-primary: #1F1F1F;
-  --color-text-secondary: #5F5F5F;
-  --color-text-muted: #8C8C8C;
-  --color-text-inverse: #FFFFFF;
-
-  /* =========================
-     States
-     ========================= */
-  --color-success: #2E7D32;
-  --color-warning: #ED6C02;
-  --color-error: #C81D1D;
-  
-  --border-radius-default: 5px;
-  --search-form-height: 42px;
+	/* =========================
+    30% – Brand (Red)
+    ========================= */
+	--color-brand: #C81D1D;
+	--color-brand-hover: #B51A1A;
+	--color-brand-active: #9E1616;
+	--color-brand-soft: rgba(200, 29, 29, 0.08);
+	
+	/* =========================
+    10% – Accent (CTA)
+    ========================= */
+	--color-accent: #F2A900;
+	--color-accent-hover: #D99600;
+	--color-accent-active: #BF8600;
+	
+	/* =========================
+    Text
+    ========================= */
+	--color-text-primary: #1F1F1F;
+	--color-text-secondary: #5F5F5F;
+	--color-text-muted: #8C8C8C;
+	--color-text-inverse: #FFFFFF;
+	
+	/* =========================
+    States
+    ========================= */
+	--color-success: #2E7D32;
+	--color-warning: #ED6C02;
+	--color-error: #C81D1D;
+	
+	--border-radius-default: 5px;
+	--search-form-height: 42px;
 }
 
 /* Permite que o footer fique sempre no final da página, independente do conteúdo da página*/
-
 html {
 	height: 100%;
 }
@@ -79,7 +77,6 @@ body {
 .footer-section {
 	margin-top: auto;
 }
-
 /* ------------------------------------------------------------ */
 
 /* Retira a caixa de seleção de categorias logo após a barra de pesquisa */
@@ -101,7 +98,6 @@ body {
 }
 
 /* Estilização dos ícones e botão no card de produto */
-
 .product-action .se-btn {
 	background-color: white;
 }
@@ -129,7 +125,6 @@ body {
 	background-color: var(--bs-primary) !important;
 	color: white !important; 
 }
-
 /* ------------------------------------------------------------ */
 
 /* Adiciona box-shadow nos cards de produto
@@ -145,7 +140,6 @@ div.product-single {
 
 /* O card inicia com opacidade zero, e no evento 'load', a classe product-single-ready é adicionada ao elemento
  * Necessário para evitar FOUC (Flash of Unstyled Content) */
-
 div.product-single {
 	opacity: 0;
 }
@@ -154,7 +148,6 @@ div.product-single-ready {
 	opacity: 1;
 	transition: opacity 0.3s;
 }
-
 /* ------------------------------------------------------------ */
 
 /* Altera a cor dos headings na home
@@ -230,14 +223,13 @@ table.variations select {
 	display: block !important;
 	flex: 1;
 }
+/* ------------------------------------------------------------ */
 
-/* Altera cor e peso da fonte do preço do produtop */
+/* Altera cor e peso da fonte do preço do produto */
 bdi  {
 	color: var(--color-brand) !important;
 	font-weight: 600;
 }
-
-/* ------------------------------------------------------------ */
 
 /* Altera display da div de ações a página do produto */
 form.cart, div.woocommerce-variation-add-to-cart {
@@ -270,142 +262,6 @@ button.shopengine-wishlist, a.shopengine-comparison {
 	margin: 0 !important;
 	order: 1;
 	font-size: 1rem;
-}
-/* ------------------------------------------------------------ */
-
-/* Estilização da table de produtos no carrinho */
-div.wc-block-components-main {
-	background-color: var(--color-bg-surface);
-	border: 1px solid var(--color-border-light);
-	border-radius: var(--border-radius-default);
-}
-
-table.wc-block-cart-items {
-	margin-top: 1rem !important;
-}
-
-div.wc-block-components-main {
-	padding-left: 1.5rem !important;
-	padding-right: 1rem !important;
-}
-
-table.wc-block-cart-items tr.wc-block-cart-items__header {
-	margin-bottom: 2rem !important;
-}
-
-th.wc-block-cart-items__header-image span {
-	font-size: 1rem;
-	color: var(--color-text-muted);
-	font-weight: 600;
-	letter-spacing: 0.12rem;
-}
-
-th.wc-block-cart-items__header-total span {
-	font-size: 0.75rem;
-	letter-spacing: 0.12rem;
-	color: var(--color-text-muted);
-	padding-right: 0 !important;
-}
-
-a.wc-block-components-product-name {
-	color: var(--color-text-primary);
-	font-size: 1rem !important;
-	font-weight: 600;
-}
-
-div.wc-block-cart-item__prices span.wc-block-components-product-price {
-	font-size: 1rem;
-	color: var(--color-brand);
-	font-weight: 600;
-}
-
-div.wc-block-cart-item__wrap a.wc-block-components-product-name:hover {
-	text-decoration: underline !important;
-}
-
-td.wc-block-cart-item__total span.wc-block-formatted-money-amount {
-	font-size: 1rem !important;
-	font-weight: 600;
-}
-/* ------------------------------------------------------------ */
-
-/* Estilização do card de produtos no carrinho */
-div.wc-block-components-product-metadata__description p {
-	font-size: 0.875rem !important;
-	color: var(--color-text-secondary);
-}
-
-.wc-block-components-quantity-selector {
-	background-color: var(--color-surface);
-	border: 1px solid var(--color-border-light);
-	color: var(--color-text-primary);
-}
-
-button.wc-block-components-quantity-selector__button {
-	background-color: var(--color-bg-main) !important;
-	color: var(--color-text-secondary) !important;
-	transition: none;
-}
-
-button.wc-block-components-quantity-selector__button:hover {
-	background-color: var(--color-brand-soft) !important;
-	color: var(--color-brand) !important;
-	outline: none;
-}
-
-button.wc-block-cart-item__remove-link {
-	color: var(--color-error) !important;
-	text-decoration: underline !important;
-}
-/* ------------------------------------------------------------ */
-
-/* Estilização do card de resumo do carrinho */
-div.wp-block-woocommerce-cart-order-summary-block {
-	background-color: var(--color-bg-surface);
-	border: 1px solid var(--color-border-light);
-	border-radius: var(--border-radius-default);
-	box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-	padding: 1rem;
-}
-
-h2.wp-block-woocommerce-cart-order-summary-heading-block {
-	color: var(--color-text-primary) !important;
-	font-weight: 600;
-}
-
-span.wc-block-components-totals-item__label {
-	color: var(--color-text-secondary);
-}
-
-div.wc-block-components-panel__button {
-	color: var(--color-text-secondary);
-}
-
-div.wc-block-components-panel__button:hover {
-	color: var(--color-brand);
-}
-
-div.wc-block-components-totals-item__value span.wc-block-formatted-money-amount {
-	color: var(--color-brand);
-	font-size: 1.5rem;
-	font-weight: 700;
-}
-
-div.wc-block-cart__submit-container {
-	background-color: var(--color-accent);
-}
-
-div.wc-block-cart__submit-container:hover {
-	background-color: var(--color-accent-hover);
-}
-
-div.wc-block-cart__submit-container:active {
-	background-color: var(--color-accent-active);
-}
-
-div.wc-block-cart__submit-container a.wc-block-cart__submit-button {
-	color: var(--color-text-primary);
-	font-weight: 600;
 }
 /* ------------------------------------------------------------ */
 

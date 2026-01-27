@@ -8,6 +8,15 @@ function storely_child_enqueue_styles() {
         ['storely-parent-style'], // Carrega primeiro o estilo do tema pai, depois o tema filho
         filemtime(get_stylesheet_directory() . '/style.css')
     );
+
+	if(is_cart()) {
+		wp_enqueue_style(
+			'cart-page-style',
+			get_stylesheet_directory_uri() . '/cart-page.css',
+			['child-style'],
+			filemtime(get_stylesheet_directory() . '/cart-page.css')
+		);
+	}
 }
 
 function storely_child_enqueue_scripts() {
