@@ -246,6 +246,17 @@ form.variations_form {
 
 form.cart .single_add_to_cart_button {
 	margin: 0 !important;
+	background-color: var(--color-accent) !important;
+	color: var(--color-text-primary) !important;
+}
+
+form.cart .single_add_to_cart_button:hover {
+	background-color: var(--color-accent-hover) !important;
+	outline: none;
+}
+
+form.cart .single_add_to_cart_button:active {
+	background-color: var(--color-accent-active) !important;
 }
 
 form.cart .quantity {
