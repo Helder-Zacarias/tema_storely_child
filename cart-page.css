@@ -104,6 +104,7 @@ span.wc-block-components-totals-item__label {
 
 div.wc-block-components-panel__button {
 	color: var(--color-text-secondary);
+	font-weight: 600;
 }
 
 div.wc-block-components-panel__button:hover {
