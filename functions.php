@@ -43,7 +43,7 @@ function storely_child_enqueue_scripts() {
 
 	// Remove a caixa de seleção de categorias e a barra de pesquisa
 	// quando o usuário está na página "Carrinho", ou em "Minha Conta"
-	if(is_cart() || is_account_page()) {
+	if(is_cart() || is_account_page() || is_checkout()) {
 		remove_action('storely_hdr_browse_cat', 'storely_hdr_browse_cat');
 		remove_action('storely_hdr_product_search', 'storely_hdr_product_search');
 	}
