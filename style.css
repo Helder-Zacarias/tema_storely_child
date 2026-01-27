@@ -22,6 +22,47 @@
 	--accent-warm: #FFC107;
 	--accent-secondary: #2196F3;
 	--accent-success: #4CAF50;
+	
+	
+	  /* =========================
+     60% – Base / Neutral
+     ========================= */
+  --color-bg-main: #F6F6F6;      /* Page background */
+  --color-bg-surface: #FFFFFF;  /* Cards, modals, product boxes */
+  --color-border-light: #E5E5E5;
+
+  /* =========================
+     30% – Brand (Red)
+     ========================= */
+  --color-brand: #C81D1D;
+  --color-brand-hover: #B51A1A;
+  --color-brand-active: #9E1616;
+  --color-brand-soft: rgba(200, 29, 29, 0.08);
+
+  /* =========================
+     10% – Accent (CTA)
+     ========================= */
+  --color-accent: #F2A900;
+  --color-accent-hover: #D99600;
+  --color-accent-active: #BF8600;
+
+  /* =========================
+     Text
+     ========================= */
+  --color-text-primary: #1F1F1F;
+  --color-text-secondary: #5F5F5F;
+  --color-text-muted: #8C8C8C;
+  --color-text-inverse: #FFFFFF;
+
+  /* =========================
+     States
+     ========================= */
+  --color-success: #2E7D32;
+  --color-warning: #ED6C02;
+  --color-error: #C81D1D;
+  
+  --border-radius-default: 5px;
+  --search-form-height: 42px;
 }
 
 /* Permite que o footer fique sempre no final da página, independente do conteúdo da página*/
@@ -34,7 +75,7 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	background-color: var(--neutral-background);
+	background-color: var(--color-bg-main);
 }
 
 .footer-section {
@@ -81,12 +122,12 @@ body {
 
 .product-action .add_to_cart_button {
 	width: 150px !important;
-	border-radius: 5px !important;
+	border-radius: var(--border-radius-default) !important;
 	color: #333 !important;
 }
 
 .product-action .add_to_cart_button:hover {
-	border-radius: 5px !important;
+	border-radius: var(--border-radius-default) !important;
 	background-color: var(--bs-primary) !important;
 	color: white !important; 
 }
@@ -100,7 +141,7 @@ div.product-single {
 	flex-direction: column;
 	height: 430.09px;
 	max-height: 430.09px;
-	border-radius: 5px;
+	border-radius: var(--border-radius-default);
 	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
 }
 
@@ -137,20 +178,34 @@ h3.elementor-heading-title {
 /* Alterar a cor do botão "Ver Produtos" na Home 
  * Altera margens top e bottom */
 a.elementor-button {
-	background-color: var(--bs-primary) !important;
+	background-color: var(--color-accent) !important;
+	color: var(--color-text-inverse) !important;
 	margin-top: 40px;
 	margin-bottom: 56px;
 }
 
+a.elementor-button:hover {
+	background-color: var(--color-brand) !important;
+}
+
 /* Remove a visibilidade do botão de busca de categorias */
 .product-category-btn {
-    visibility: hidden;
+	background: var(--color-bg-surface);
+	color: var(--color-text-primary);
+	border: 1px solid var(--color-border-light);
+	visibility: hidden;
+}
+
+.product-category-btn:focus, .product-category-btn:hover {
+	background: var(--color-brand-hover) !important;
 }
 
 /* Altera a margin-bottom e cor do header */
 header#main-header, div.main-mobile-nav {
 	margin-bottom: 48px;
-	background-color: var(--neutral-light) !important;
+	background-color: var(--color-bg-surface) !important;
+	border-bottom: var(--color-border-light) !important;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
 }
 
 div.main-mobile-menu .container {
@@ -180,7 +235,7 @@ table.variations select {
 
 /* Altera cor e peso da fonte do preço do produtop */
 bdi  {
-	color: var(--accent-success) !important;
+	color: var(--color-brand) !important;
 	font-weight: 600;
 }
 
@@ -222,9 +277,9 @@ button.shopengine-wishlist, a.shopengine-comparison {
 
 /* Estilização da table de produtos no carrinho */
 div.wc-block-components-main {
-	background-color: var(--neutral-white);
-	border: 1px solid var(--neutral-light);
-	border-radius: 5px;
+	background-color: var(--color-bg-surface);
+	border: 1px solid var(--color-border-light);
+	border-radius: var(--border-radius-default);
 }
 
 table.wc-block-cart-items {
@@ -238,7 +293,6 @@ div.wc-block-components-main {
 
 table.wc-block-cart-items tr.wc-block-cart-items__header {
 	margin-bottom: 2rem !important;
-	background-color !important;
 }
 
 th.wc-block-cart-items__header-image span {
@@ -263,7 +317,7 @@ a.wc-block-components-product-name {
 }
 
 div.wc-block-cart-item__wrap a.wc-block-components-product-name:hover {
-	text-decoration: underline !important:
+	text-decoration: underline !important;
 }
 
 td.wc-block-cart-item__total span.wc-block-formatted-money-amount {
@@ -290,7 +344,7 @@ button.wc-block-cart-item__remove-link {
 div.summary {
 	border: 1px solid var(--neutral-light);
 	background-color: var(--neutral-white);
-	border-radius: 5px;
+	border-radius: var(--border-radius-default);
 	padding: 2rem !important;
 	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
 }
@@ -298,6 +352,11 @@ div.summary {
 /* Justifica o descrição do produto */
 div.woocommerce-product-details__short-description p {
 	text-align: justify !important;
+}
+
+input.header-search-input {
+	background: var(--color-bg-surface) !important;
+	width: 100% !important;
 }
 
 /* Remove animação da imagem ao passar o mouse */
