@@ -9,39 +9,22 @@ function storely_child_enqueue_styles() {
         filemtime(get_stylesheet_directory() . '/style.css')
     );
 
-	if(is_front_page()) {
-		wp_enqueue_style(
-			'home-style',
-			get_stylesheet_directory_uri() . '/home.css',
-			['child-style'],
-			filemtime(get_stylesheet_directory() . '/home.css')
-		);
-	}
+	checkCurrentPage('front_page', 'home');
+	checkCurrentPage('cart', 'cart-page');
+	checkCurrentPage('account_page', 'minha-conta');
+	checkCurrentPage('shop', 'loja');
+}
 
-	if(is_cart()) {
-		wp_enqueue_style(
-			'cart-page-style',
-			get_stylesheet_directory_uri() . '/cart-page.css',
-			['child-style'],
-			filemtime(get_stylesheet_directory() . '/cart-page.css')
-		);
-	}
+// Caheca página dinamicamente, retirando 'if's desenecessários do código
+function checkCurrentPage($page, $cssFile) {
+	$function = 'is_' . $page;
 
-	if(is_account_page()) {
+	if(function_exists($function) && $function()) {
 		wp_enqueue_style(
-			'minha-conta-style',
-			get_stylesheet_directory_uri() . '/minha-conta.css',
+			$cssFile . '-style',
+			get_stylesheet_directory_uri() . '/' . $cssFile . '.css',
 			['child-style'],
-			filemtime(get_stylesheet_directory() . './minha-conta.css')
-		);
-	}
-
-	if(is_shop()) {
-		wp_enqueue_style(
-			'loja-style',
-			get_stylesheet_directory_uri() . '/loja.css',
-			['child-style'],
-			filemtime(get_stylesheet_directory() . '/loja.css')
+			filemtime(get_stylesheet_directory() . '/' . $cssFile . '.css')
 		);
 	}
 }
