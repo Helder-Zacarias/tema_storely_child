@@ -2,11 +2,14 @@
 div.wc-block-components-main {
 	background-color: var(--color-bg-surface);
 	border: 1px solid var(--color-border-light);
-	border-radius: var(--border-radius-default);
+	border-radius: var(--border-radius-bigger);
+	box-shadow: 0 6px 18px rgba(0,0,0,.06);
 }
 
-table.wc-block-cart-items {
-	margin-top: 1rem !important;
+table.wc-block-cart-items td {
+	border-collapse: separate !important;
+	border-spacing: 0 1.25rem !important;
+	/* border: none !important; */
 }
 
 div.wc-block-components-main {
@@ -35,13 +38,20 @@ th.wc-block-cart-items__header-total span {
 a.wc-block-components-product-name {
 	color: var(--color-text-primary);
 	font-size: 1rem !important;
-	font-weight: 600;
+	font-weight: 800;
 }
 
-div.wc-block-cart-item__prices span.wc-block-components-product-price {
+div.wc-block-cart-item__quantity {
+	justify-content: flex-start !important;
+	margin-top: 0.5rem !important;
+	color: var(--color-brand) !important;
+	gap: 0.5rem;
+}
+
+div.wc-block-cart-item__prices span.wc-block-components-product-price span.wc-block-formatted-money-amount {
 	font-size: 1rem;
-	color: var(--color-brand);
-	font-weight: 600;
+	color: var(--color-text-primary);
+	font-weight: 500;
 }
 
 div.wc-block-cart-item__wrap a.wc-block-components-product-name:hover {
@@ -49,8 +59,7 @@ div.wc-block-cart-item__wrap a.wc-block-components-product-name:hover {
 }
 
 td.wc-block-cart-item__total span.wc-block-formatted-money-amount {
-	font-size: 1rem !important;
-	font-weight: 600;
+	font-size: 1.125rem !important;
 }
 /* ------------------------------------------------------------ */
 
@@ -79,21 +88,51 @@ button.wc-block-components-quantity-selector__button:hover {
 }
 
 button.wc-block-cart-item__remove-link {
-	color: var(--color-error) !important;
-	text-decoration: underline !important;
+	color: var(--color-text-muted) !important;
 }
+
+table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity .wc-block-cart-item__remove-link {
+	position: relative !important;
+	font-size: 0.75rem !important;
+	font-weight: 500 !important;
+	color: var(--color-text-muted) !important;
+	text-decoration: none !important;
+}
+
+button.wc-block-cart-item__remove-link::after {
+	color: var(--color-brand) !important;
+	outline: 0 !important;
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -2px;
+	height: 1px;
+	opacity: .7 !important;
+}
+
+table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity .wc-block-cart-item__remove-link:hover {
+	color: var(--color-brand) !important;
+	outline: 0 !important;
+}
+
+button.wc-block-cart-item__remove-link:hover::after {
+	opacity: 1 !important;
+}
+
 /* ------------------------------------------------------------ */
 
 /* Estilização do card de resumo do carrinho */
 div.wp-block-woocommerce-cart-order-summary-block {
 	background-color: var(--color-bg-surface);
-	border: 1px solid var(--color-border-light);
+	border-top: 12px solid var(--color-brand);
 	border-radius: var(--border-radius-default);
 	box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 	padding: 1rem;
 }
 
 h2.wp-block-woocommerce-cart-order-summary-heading-block {
+	padding-top: 1.5rem !important;
 	color: var(--color-text-primary) !important;
 	font-weight: 600;
 }
@@ -111,26 +150,37 @@ div.wc-block-components-panel__button:hover {
 	color: var(--color-brand);
 }
 
+div.wc-block-components-totals-wrapper:last-child {
+	padding-top: 2.5rem !important;
+}
+
 div.wc-block-components-totals-item__value span.wc-block-formatted-money-amount {
 	color: var(--color-brand);
 	font-size: 1.5rem;
 	font-weight: 700;
 }
 
-div.wc-block-cart__submit-container {
-	background-color: var(--color-accent);
+div.wp-block-woocommerce-proceed-to-checkout-block div.wc-block-cart__submit-container a.wc-block-cart__submit-button {
+	background-color: var(--color-accent) !important;
+	border-radius: 999px !important;
 }
 
-div.wc-block-cart__submit-container:hover {
+div.wp-block-woocommerce-proceed-to-checkout-block div.wc-block-cart__submit-container a.wc-block-cart__submit-button {
 	background-color: var(--color-accent-hover);
 }
 
-div.wc-block-cart__submit-container:active {
+div.wp-block-woocommerce-proceed-to-checkout-block div.wc-block-cart__submit-container a.wc-block-cart__submit-button {
 	background-color: var(--color-accent-active);
 }
 
 div.wc-block-cart__submit-container a.wc-block-cart__submit-button {
 	color: var(--color-text-primary);
 	font-weight: 600;
+	padding: 1rem;
 }
 /* ------------------------------------------------------------ */
+
+tr.wc-block-cart-items__row td {
+	padding-top: 3rem !important;
+	padding-bottom: 3.5rem !important;
+}
