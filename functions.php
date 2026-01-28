@@ -13,6 +13,7 @@ function storely_child_enqueue_styles() {
 	checkCurrentPage('cart', 'cart-page');
 	checkCurrentPage('account_page', 'minha-conta');
 	checkCurrentPage('shop', 'loja');
+	checkCurrentPage('product', 'produto');
 }
 
 // Caheca página dinamicamente, retirando 'if's desenecessários do código

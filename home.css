@@ -10,7 +10,7 @@ h3.elementor-heading-title {
 
 /* Adicona borda e box-shadow ao card de produtos na Home  */
 .shopengine-single-product-item {
-	border: 1px solid var(--neutral-light) !important;
+	border: 1px solid var(--color-border-light) !important;
 	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
 }
 
@@ -25,4 +25,10 @@ a.elementor-button {
 
 a.elementor-button:hover {
 	background-color: var(--color-accent-hover) !important;
+}
+
+/* Altera cor e peso da fonte do preço do produto */
+bdi  {
+	color: var(--color-brand) !important;
+	font-weight: 600;
 }

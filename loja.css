@@ -2,7 +2,7 @@
 .page-title {
 	font-size: 3rem;
 	font-weight: 600;
-	color: var(--bs-primary);
+	color: var(--color-brand) !important;
     margin-bottom: 0;
 	text-transform: uppercase;
 }

@@ -10,17 +10,9 @@
 */
 
 :root {
-	--bs-primary:  #C81D1D;
-    --bs-danger: #d40000;
-	--neutral-background: #FAFAFB;
-	
-	--secondary: #FF6B6B;
-	--neutral-dark: #5A5A5A;
-	--neutral-medium: #7D7D7D;
-	--neutral-light: #EAEAEA;
-	--neutral-white: #FFFFFF;
-	--accent-success: #4CAF50;
-	
+	/* Necessário para definir a cor geral do site */
+	--bs-primary: #C81D1D;
+	--bs-danger: #C81D1D;
 	/* =========================
     60% – Base / Neutral
     ========================= */
@@ -107,93 +99,7 @@ header#main-header, div.main-mobile-nav {
 .product-category-btn:focus, .product-category-btn:hover {
 	background: var(--color-brand-hover) !important;
 }
-
-/* Altera display da table de informações do produto*/
-table.variations {
-	display: flex !important;
-	justify-content: space-between;
-	align-items: center;
-}
-
-table.variations th.label {
-	display: inline !important;
-	white-space: nowrap !important;
-	padding: 0 !important;
-	margin-right: 0.5rem;
-}
-
-table.variations select {
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
-	display: block !important;
-	flex: 1;
-}
 /* ------------------------------------------------------------ */
-
-/* Altera cor e peso da fonte do preço do produto */
-bdi  {
-	color: var(--color-brand) !important;
-	font-weight: 600;
-}
-
-/* Altera display da div de ações na página do produto */
-form.cart, div.woocommerce-variation-add-to-cart {
-	display: inline-flex !important;
-	align-items: center;
-	gap: 0.5rem;
-}
-
-form.variations_form {
-	display: flex !important;
-	flex-direction: column !important;
-	align-items: flex-start;
-}
-
-form.cart .single_add_to_cart_button {
-	margin: 0 !important;
-	background-color: var(--color-accent) !important;
-	color: var(--color-text-primary) !important;
-}
-
-form.cart .single_add_to_cart_button:hover {
-	background-color: var(--color-accent-hover) !important;
-	outline: none;
-}
-
-form.cart .single_add_to_cart_button:active {
-	background-color: var(--color-accent-active) !important;
-}
-
-form.cart .quantity {
-	order: 0;
-	margin: 0 !important;
-}
-/* ------------------------------------------------------------ */
-
-/* Altera cores dos botões de ações da página de produtos */
-button.shopengine-wishlist, a.shopengine-comparison {
-	border: none;
-	background-color: var(--neutral-background);
-	color: var(--bs-primary);
-	margin: 0 !important;
-	order: 1;
-	font-size: 1rem;
-}
-/* ------------------------------------------------------------ */
-
-/* Adiciona background e box-shadow às informações do produto */
-div.summary {
-	border: 1px solid var(--neutral-light);
-	background-color: var(--neutral-white);
-	border-radius: var(--border-radius-default);
-	padding: 2rem !important;
-	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
-}
-
-/* Justifica o descrição do produto */
-div.woocommerce-product-details__short-description p {
-	text-align: justify !important;
-}
 
 input.header-search-input {
 	background: var(--color-bg-surface) !important;
