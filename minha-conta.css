@@ -1,0 +1,4 @@
+/* Retira a linha sublinhada dos links na página Minha Conta */
+.woocommerce-MyAccount-navigation-link a {
+	text-decoration: none !important;
+}

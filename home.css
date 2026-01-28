@@ -1,0 +1,28 @@
+/* Altera a cor dos headings na home
+ * Altera espaçamento entre as letras, tamanho e peso da fonte */
+h3.elementor-heading-title {
+	color: var(--color-brand) !important;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	font-size: 1rem;
+}
+
+/* Adicona borda e box-shadow ao card de produtos na Home  */
+.shopengine-single-product-item {
+	border: 1px solid var(--neutral-light) !important;
+	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
+}
+
+/* Alterar a cor do botão "Ver Produtos" na Home 
+ * Altera margens top e bottom */
+a.elementor-button {
+	background-color: var(--color-accent) !important;
+	color: var(--color-text-inverse) !important;
+	margin-top: 40px;
+	margin-bottom: 56px;
+}
+
+a.elementor-button:hover {
+	background-color: var(--color-accent-hover) !important;
+}

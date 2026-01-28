@@ -9,6 +9,15 @@ function storely_child_enqueue_styles() {
         filemtime(get_stylesheet_directory() . '/style.css')
     );
 
+	if(is_front_page()) {
+		wp_enqueue_style(
+			'home-style',
+			get_stylesheet_directory_uri() . '/home.css',
+			['child-style'],
+			filemtime(get_stylesheet_directory() . '/home.css')
+		);
+	}
+
 	if(is_cart()) {
 		wp_enqueue_style(
 			'cart-page-style',
@@ -17,20 +26,27 @@ function storely_child_enqueue_styles() {
 			filemtime(get_stylesheet_directory() . '/cart-page.css')
 		);
 	}
+
+	if(is_account_page()) {
+		wp_enqueue_style(
+			'minha-conta-style',
+			get_stylesheet_directory_uri() . '/minha-conta.css',
+			['child-style'],
+			filemtime(get_stylesheet_directory() . './minha-conta.css')
+		);
+	}
+
+	if(is_shop()) {
+		wp_enqueue_style(
+			'loja-style',
+			get_stylesheet_directory_uri() . '/loja.css',
+			['child-style'],
+			filemtime(get_stylesheet_directory() . '/loja.css')
+		);
+	}
 }
 
 function storely_child_enqueue_scripts() {
-	if(!is_shop()) {
-		wp_enqueue_script(
-			'traducao-js',
-			get_stylesheet_directory_uri() . '/js/traducao.js',
-			[],
-			'1.0',
-			true
-		);
-	}
-	
-	
 	if(is_shop()) {
 		wp_enqueue_script(
 			'card-product-js',
@@ -46,6 +62,14 @@ function storely_child_enqueue_scripts() {
 	if(is_cart() || is_account_page() || is_checkout()) {
 		remove_action('storely_hdr_browse_cat', 'storely_hdr_browse_cat');
 		remove_action('storely_hdr_product_search', 'storely_hdr_product_search');
+	} else {
+		wp_enqueue_script(
+			'traducao-js',
+			get_stylesheet_directory_uri() . '/js/traducao.js',
+			[],
+			'1.0',
+			true
+		);
 	}
 }
 

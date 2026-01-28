@@ -1,0 +1,62 @@
+/* Altera heading da página Loja */
+.page-title {
+	font-size: 3rem;
+	font-weight: 600;
+	color: var(--bs-primary);
+    margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+.wp-post-image {
+	height: 276.08px !important;
+}
+
+/* Estilização dos ícones e botão no card de produto */
+.product-action .se-btn {
+	background-color: white;
+}
+
+.product-action .se-btn i {
+	color: var(--color-text-secondary);
+}
+
+.product-action .shopengine-wishlist {
+	text-align: center;
+}
+
+.product-action .add_to_cart_button {
+	width: 150px !important;
+	border-radius: var(--border-radius-default) !important;
+	background-color: var(--color-accent) !important;
+	color: var(--color-text-primary) !important;
+}
+
+.product-action .add_to_cart_button:hover {
+	border-radius: var(--border-radius-default) !important;
+	background-color: var(--color-accent-hover) !important;
+	color: var(--color-text-primary) !important; 
+}
+/* ------------------------------------------------------------ */
+
+/* Adiciona box-shadow nos cards de produto
+ * Define altura máxima para os cards */
+div.product-single {
+	display: flex !important;
+	flex-direction: column;
+	height: 430.09px;
+	max-height: 430.09px;
+	border-radius: var(--border-radius-default);
+	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
+}
+
+/* O card inicia com opacidade zero, e no evento 'load', a classe product-single-ready é adicionada ao elemento
+ * Necessário para evitar FOUC (Flash of Unstyled Content) */
+div.product-single {
+	opacity: 0;
+}
+
+div.product-single-ready {
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+/* ------------------------------------------------------------ */

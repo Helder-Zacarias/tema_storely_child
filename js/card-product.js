@@ -1,7 +1,6 @@
 // Remove a descrição do produto no card de produto
 document.addEventListener('DOMContentLoaded', () => {
 	const productContentCollection = document.getElementsByClassName("product-content");
-	console.log(productContentCollection);
 	
 	for(const productContent of productContentCollection) {
 		for(const node of productContent.childNodes) {
