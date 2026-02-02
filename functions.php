@@ -41,6 +41,16 @@ function storely_child_enqueue_scripts() {
 		);
 	}
 
+	if(is_cart()) {
+		wp_enqueue_script(
+			'traducao-resumo-carrinho-js',
+			get_stylesheet_directory_uri() . '/js/traducao-resumo-carrinho.js',
+			[],
+			'1.0',
+			true
+		);
+	}
+
 	if(is_shop() || is_product()) {
 		wp_enqueue_script(
 			'card-product-js',
