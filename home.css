@@ -1,17 +1,65 @@
+.elementor-96 > .e-parent:first-of-type > .e-con-inner {
+	background-color: var(--color-bg-surface);
+	padding-left: 2.75rem;
+	padding-right: 2.75rem;
+	padding-top: 1.5rem;
+	padding-bottom: 2.5rem;
+	border-radius: 12px;
+	margin: 0 !important;
+	align-self: center;
+	width: 1500px !important;
+	box-shadow: 0 0 1px var(--box-shadow-light);
+}
+
 /* Altera a cor dos headings na home
  * Altera espaçamento entre as letras, tamanho e peso da fonte */
 h3.elementor-heading-title {
 	color: var(--color-brand) !important;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 800;
 	letter-spacing: 0.06em;
-	font-size: 1rem;
+	font-size: 1.125rem;
+	padding-top: 1.75rem;
+	padding-bottom: 1.5rem;
+	display: inline-flex;
+	text-decoration: underline;
+	text-decoration-thickness: 0.125rem;
+	text-underline-offset: 0.25rem;
 }
 
 /* Adicona borda e box-shadow ao card de produtos na Home  */
 .shopengine-single-product-item {
+	background-color: var(--color-bg-surface) !important;
 	border: 1px solid var(--color-border-light) !important;
-	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	box-shadow: 0 0 10px var(--box-shadow-light);
+}
+
+.shopengine-single-product-item .product-category a {
+	color: var(--color-text-muted) !important;
+	opacity: 0.6;
+}
+
+.shopengine-single-product-item .product-title a {
+	color: var(--color-text-primary) !important;
+	font-size: 1rem;
+	font-weight: 600 !important;
+}
+
+.shopengine-single-product-item .product-price bdi {
+	color: var(--color-brand) !important;
+	font-size: 1.125rem;
+	font-weight: 700;
+}
+
+.shopengine-single-product-item .product-rating .star-rating span::before {
+	color: var(--color-accent) !important;
+}
+
+.product-thumb .overlay-add-to-cart {
+	width: 100% !important;
+	max-width: 100% !important;
 }
 
 /* Alterar a cor do botão "Ver Produtos" na Home 

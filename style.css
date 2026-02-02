@@ -53,6 +53,7 @@
 	--border-radius-default: 5px;
 	--border-radius-bigger: 12px;
 	--search-form-height: 42px;
+	--box-shadow-light: rgba(0, 0, 0, 0.1);
 }
 
 /* Permite que o footer fique sempre no final da página, independente do conteúdo da página*/
