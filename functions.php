@@ -31,7 +31,7 @@ function checkCurrentPage($page, $cssFile) {
 }
 
 function storely_child_enqueue_scripts() {
-	if(is_shop()) {
+	if(is_shop() || is_product()) {
 		wp_enqueue_script(
 			'card-product-js',
 			get_stylesheet_directory_uri() . '/js/card-product.js',

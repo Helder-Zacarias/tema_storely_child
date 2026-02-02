@@ -1,8 +1,3 @@
-/* Adicionar margem direita a image do produto */
-.woocommerce-product-gallery__wrapper {
-	margin-right: 2rem !important;
-}
-
 /* Altera display da table de informações do produto*/
 table.variations {
 	display: flex !important;
