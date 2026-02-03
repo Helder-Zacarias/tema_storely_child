@@ -156,6 +156,51 @@ div.product-single-ready {
 	opacity: 1;
 	transition: opacity 0.3s;
 }
+
+/* Altera as cores de texto e backgroudn dos botões no modal de carrinho,
+e remove as animações no hover */
+.cart-ft-btn.button.btn.btn-primary.cart-ft-btn-cart {
+	background-color: var(--color-bg-surface);
+	color: var(--color-text-primary);
+	border: 1px solid var(--color-text-muted) !important;
+}
+
+.cart-ft-btn.button.btn.btn-primary.cart-ft-btn-cart:hover {
+	border: none !important;
+	background-color: var(--color-brand-soft);
+}
+
+.cart-ft-btn.button.btn.btn-border-secondary.cart-ft-btn-checkout {
+	background-color: var(--color-brand);
+	color: var(--color-text-inverse);
+	border: none;
+}
+
+.cart-ft-btn.button.btn.btn-border-secondary.cart-ft-btn-checkout:hover {
+	background-color: var(--color-brand-hover) !important;
+}
+
+a.cart-ft-btn.cart-ft-btn-checkout,
+a.cart-ft-btn.cart-ft-btn-checkout *,
+a.cart-ft-btn.cart-ft-btn-checkout::before,
+a.cart-ft-btn.cart-ft-btn-checkout::after {
+	transition: none !important;
+	animation: none !important;
+	transition: 3s;
+}
+
+a.cart-ft-btn.cart-ft-btn-cart,
+a.cart-ft-btn.cart-ft-btn-cart *,
+a.cart-ft-btn.cart-ft-btn-cart::before,
+a.cart-ft-btn.cart-ft-btn-cart::after {
+	transition: none !important;
+	animation: none !important;
+}
+
+.cart-ft-btn.button.btn.btn-primary.cart-ft-btn-cart .hover,
+.cart-ft-btn.button.btn.btn-border-secondary.cart-ft-btn-checkout .hover {
+	display: none !important;
+}
 /* ------------------------------------------------------------ */
 
 /* Remove animação da imagem ao passar o mouse */
