@@ -1,10 +1,24 @@
+/* Alterar paddings top e bottom no em toda a seção de produtos */
+.storely-content .post-section {
+	padding-top: 2rem !important;
+	padding-bottom: 4rem !important
+}
+
+/* Alterar estilização do container dos produtos */
+#product .container {
+	background-color: var(--color-bg-surface);
+	padding: 2rem;
+	border-radius: var(--border-radius-bigger)
+}
+
 /* Altera heading da página Loja */
 .page-title {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-weight: 600;
 	color: var(--color-brand) !important;
-    margin-bottom: 0;
+    margin-bottom: 2rem !important;
 	text-transform: uppercase;
+	text-decoration: underline;
 }
 
 .wp-post-image {
