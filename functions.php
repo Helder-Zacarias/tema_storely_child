@@ -81,3 +81,14 @@ function storely_child_enqueue_scripts() {
 
 add_action('wp_enqueue_scripts', 'storely_child_enqueue_styles', 20);
 add_action('wp_enqueue_scripts', 'storely_child_enqueue_scripts');
+add_action('get_header', 'add_top_offer_banner', 5);
+
+function add_top_offer_banner() {
+	if(is_front_page()) {
+		?>
+			<div class="top-offer-banner">
+				🔥 Ofertas por tempo limitado! Frete grátis acima de R$199
+			</div>
+		<?php
+	}
+}
