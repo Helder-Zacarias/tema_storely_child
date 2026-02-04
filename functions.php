@@ -9,18 +9,16 @@ function storely_child_enqueue_styles() {
         filemtime(get_stylesheet_directory() . '/style.css')
     );
 
-	checkCurrentPage('front_page', 'home');
-	checkCurrentPage('cart', 'cart-page');
-	checkCurrentPage('account_page', 'minha-conta');
-	checkCurrentPage('shop', 'loja');
-	checkCurrentPage('product', 'produto');
+	addStyleToPage('front_page', 'home');
+	addStyleToPage('cart', 'cart-page');
+	addStyleToPage('account_page', 'minha-conta');
+	addStyleToPage('shop', 'loja');
+	addStyleToPage('product', 'produto');
 }
 
 // Caheca página dinamicamente, retirando 'if's desenecessários do código
-function checkCurrentPage($page, $cssFile) {
-	$function = 'is_' . $page;
-
-	if(function_exists($function) && $function()) {
+function addStyleToPage($page, $cssFile) {
+	if(checkCurrentPage($page)) {
 		wp_enqueue_style(
 			$cssFile . '-style',
 			get_stylesheet_directory_uri() . '/' . $cssFile . '.css',
@@ -28,6 +26,11 @@ function checkCurrentPage($page, $cssFile) {
 			filemtime(get_stylesheet_directory() . '/' . $cssFile . '.css')
 		);
 	}
+}
+
+function checkCurrentPage($page) {
+	$function = 'is_' . $page;
+	return function_exists($function) && $function();
 }
 
 function storely_child_enqueue_scripts() {
