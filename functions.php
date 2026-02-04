@@ -16,7 +16,7 @@ function storely_child_enqueue_styles() {
 	addStyleToPage('product', 'produto');
 }
 
-// Caheca página dinamicamente, retirando 'if's desenecessários do código
+// Carrega página dinamicamente, retirando 'if's desnecessários do código
 function addStyleToPage($page, $cssFile) {
 	if(checkCurrentPage($page)) {
 		wp_enqueue_style(
