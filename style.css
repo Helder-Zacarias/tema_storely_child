@@ -165,19 +165,10 @@ e remove as animações no hover */
 	border: 1px solid var(--color-text-muted) !important;
 }
 
-.cart-ft-btn.button.btn.btn-primary.cart-ft-btn-cart:hover {
-	border: none !important;
-	background-color: var(--color-brand-soft);
-}
-
 .cart-ft-btn.button.btn.btn-border-secondary.cart-ft-btn-checkout {
 	background-color: var(--color-brand);
 	color: var(--color-text-inverse);
 	border: none;
-}
-
-.cart-ft-btn.button.btn.btn-border-secondary.cart-ft-btn-checkout:hover {
-	background-color: var(--color-brand-hover) !important;
 }
 
 a.cart-ft-btn.cart-ft-btn-checkout,
@@ -201,6 +192,24 @@ a.cart-ft-btn.cart-ft-btn-cart::after {
 .cart-ft-btn.button.btn.btn-border-secondary.cart-ft-btn-checkout .hover {
 	display: none !important;
 }
+
+.cart-ft-btn.button.btn.btn-primary.cart-ft-btn-cart {
+	transition: background-color 1s ease !important;
+}
+
+.cart-ft-btn.button.btn.btn-primary.cart-ft-btn-cart:hover {
+	border: 1px solid var(--color-bg-surface) !important;
+	background-color: var(--color-accent);
+}
+
+.cart-ft-btn.button.btn.btn-border-secondary.cart-ft-btn-checkout {
+	transition: background-color 0.5s ease !important;
+}
+
+.cart-ft-btn.button.btn.btn-border-secondary.cart-ft-btn-checkout:hover {
+	background-color: green !important;
+}
+
 /* ------------------------------------------------------------ */
 
 /* Remove animação da imagem ao passar o mouse */
