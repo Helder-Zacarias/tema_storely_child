@@ -146,12 +146,18 @@ input.header-search-input {
 	background: var(--color-bg-surface) !important;
 	padding-top: 0!important;
 	padding-bottom: 0 !important;
+	
 	flex: 1;
 }
 
 .header-search-form form input.header-search-input {
 	height: 100% !important;
 	align-self: center;
+}
+
+/* Define tamamho mínimo para a fonte do placeholder da barra de pesquisa */ 
+input.header-search-input::placeholder {
+	font-size: min(4vw, 1rem);
 }
 
 button.header-search-button {
