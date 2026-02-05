@@ -14,7 +14,9 @@
 /* Alterar paddings top e bottom em todo o conteúdo da home */
 .storely-content .post-section {
 	padding-top: 1.25rem !important;
-	padding-bottom: 4rem !important
+	padding-bottom: 4rem !important;
+	display: flex;
+	justify-content: center;
 }
 
 .elementor-96 > .e-parent:first-of-type > .e-con-inner {
@@ -26,8 +28,17 @@
 	border-radius: 12px;
 	margin: 0 !important;
 	align-self: center;
-	width: 1500px !important;
+	/* width: clamp(200px, 250px, 300px) !important; */
 	box-shadow: 0 0 1px var(--box-shadow-light);
+}
+
+.elementor-96 > .e-parent > .e-con-inner {
+	justify-content: center ! important;
+}
+
+.elementor-widget-shopengine-product-list {
+	display: flex !important;
+	justify-content: center !important;
 }
 
 /* Altera a cor dos headings na home
@@ -50,6 +61,7 @@ h3.elementor-heading-title {
 .shopengine-single-product-item {
 	background-color: var(--color-bg-surface) !important;
 	border: 1px solid var(--color-border-light) !important;
+	width: clamp(150px, 248px, 300px) !important;
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
 	box-shadow: 0 0 10px var(--box-shadow-light);
