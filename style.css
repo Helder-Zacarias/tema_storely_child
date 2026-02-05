@@ -159,6 +159,11 @@ button.header-search-button {
 	height: 100% !important;
 	border-radius: 0 var(--border-radius-bigger) var(--border-radius-bigger) 0 !important;
 }
+
+button.header-search-button:hover {
+	background-color:var(--color-brand-hover) !important;
+	outline: none;
+}
 /* ------------------------------------------------------------ */
 
 /* Estilização dos ícones e botão no card de produto */
