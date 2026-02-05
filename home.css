@@ -2,11 +2,13 @@
 .top-offer-banner {
 	background-color: var(--color-brand-active);
 	color: var(--color-text-inverse);
-	height: 4rem;
+	min-height: 4rem;
+	height: auto;
 	line-height: 4rem;
-	font-size: 1.75rem;
+	font-size: clamp(0.625rem, 2vw, 1.75rem);
 	font-weight: 700;
 	text-align: center;
+	white-space: normal;
 }
 
 /* Alterar paddings top e bottom em todo o conteúdo da home */
