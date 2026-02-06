@@ -28,7 +28,6 @@
 	border-radius: 12px;
 	margin: 0 !important;
 	align-self: center;
-	/* width: clamp(200px, 250px, 300px) !important; */
 	box-shadow: 0 0 1px var(--box-shadow-light);
 }
 
@@ -57,11 +56,11 @@ h3.elementor-heading-title {
 	text-underline-offset: 0.25rem;
 }
 
-/* Adicona borda e box-shadow ao card de produtos na Home  */
+/* Adiciona borda e box-shadow ao card de produtos na Home  */
 .shopengine-single-product-item {
 	background-color: var(--color-bg-surface) !important;
 	border: 1px solid var(--color-border-light) !important;
-	width: clamp(200px, 8vw, 248px) !important;
+	width: clamp(220px, 13vw, 248px) !important;
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
 	box-shadow: 0 0 10px var(--box-shadow-light);
@@ -88,9 +87,16 @@ h3.elementor-heading-title {
 	color: var(--color-accent) !important;
 }
 
-.product-thumb .overlay-add-to-cart {
-	width: 100% !important;
-	max-width: 100% !important;
+/* Adiciona responsividade a imagem contida nos cards de produtos */
+.product-thumb a img {
+	height: clamp(200px, 15vh, 250px) !important;
+	object-fit: contain !important;
+}
+
+/* Adiciona responsividade ao overlay nocard de produtos */
+.product-thumb .overlay-add-to-cart a.se-btn {
+	padding: clamp(3px, 1vw, 1rem) !important;
+	margin: 0 !important;
 }
 
 /* Alterar a cor do botão "Ver Produtos" na Home 
@@ -110,6 +116,11 @@ a.elementor-button:hover {
 bdi  {
 	color: var(--color-brand) !important;
 	font-weight: 600;
+}
+
+/* Adiciona responsividade ao colum-gap dos produtos na Home */
+.product-list-grid {
+	column-gap: clamp(0.5rem, 1vw, 1rem) !important;
 }
 
 /* Centraliza os headings em disopsitivos com largura de tela até 768px */
