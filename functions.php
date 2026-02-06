@@ -77,6 +77,16 @@ function storely_child_enqueue_scripts() {
 			true
 		);
 	}
+
+	if(is_account_page()) {
+		wp_enqueue_script(
+			'traducao-wishlist-js',
+			get_stylesheet_directory_uri() . '/js/traducao-wishlist.js',
+			[],
+			'1.0',
+			true
+		);
+	}
 }
 
 add_action('wp_enqueue_scripts', 'storely_child_enqueue_styles', 20);
