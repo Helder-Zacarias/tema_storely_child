@@ -113,6 +113,38 @@ body {
 }
 /* ------------------------------------------------------------ */
 
+/* Adiciona responsividade ao texto do botão de categorias  */
+.product-category-btn span {
+	display: inline-flex;
+	align-items: center;
+	font-size: clamp(0.875rem, 1vw, 1rem);
+	gap: 0.5rem;
+}
+
+.product-category-btn span i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1em;
+	line-height: 1;
+	margin-right: 0;
+	width: 1em;
+	height: 1em;
+}
+
+.product-category-btn span {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+
+
+.product-category-btn span i {
+	margin-right: 0;
+}
+
+/* ------------------------------------------------------------ */
+
 /* Define height para o form para que todos os itens estejam perfeitamente alinhados
    Agora o botão de busca está totalmente alinhado com a barra de pesquisa */
 div#browse-section.browse-section .container .row {
@@ -155,9 +187,9 @@ input.header-search-input {
 	align-self: center;
 }
 
-/* Define tamamho mínimo para a fonte do placeholder da barra de pesquisa */ 
+/* Adiciona responsividade ao placeholder da barra de pesquisa */ 
 input.header-search-input::placeholder {
-	font-size: min(4vw, 1rem);
+	font-size: clamp(0.875rem, 1vw, 1rem);
 }
 
 button.header-search-button {
