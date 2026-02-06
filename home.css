@@ -89,13 +89,19 @@ h3.elementor-heading-title {
 
 /* Adiciona responsividade a imagem contida nos cards de produtos */
 .product-thumb a img {
+	padding-top: 1rem !important;
 	height: clamp(200px, 15vh, 250px) !important;
 	object-fit: contain !important;
 }
 
-/* Adiciona responsividade ao overlay nocard de produtos */
+.product-thumb .overlay-add-to-cart {
+	width: 100% !important;
+}
+
+/* Adiciona responsividade ao overlay no card de produtos */
 .product-thumb .overlay-add-to-cart a.se-btn {
-	padding: clamp(3px, 1vw, 1rem) !important;
+	padding-left: clamp(3px, 1vw, 1rem) !important;
+	padding-right: clamp(3px, 1vw, 1rem) !important;
 	margin: 0 !important;
 }
 
@@ -121,12 +127,20 @@ bdi  {
 /* Adiciona responsividade ao colum-gap dos produtos na Home */
 .product-list-grid {
 	column-gap: clamp(0.5rem, 1vw, 1rem) !important;
+	justify-items: center !important;
 }
 
 /* Centraliza os headings em disopsitivos com largura de tela até 768px */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+	/* Adiciona responsividade aos headers em telas de até 1024px */
 	h3.elementor-heading-title {
 		display: block;
 		text-align: center !important;
+		font-size: clamp(1.25rem, 2.5vw, 2rem);
+	}
+
+	/* Adiciona responsividade ao card de produtos em telas de até 2014px */
+	.shopengine-single-product-item {
+		width: clamp(210px, 80%, 350px) !important;
 	}
 }
