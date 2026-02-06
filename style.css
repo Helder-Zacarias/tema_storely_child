@@ -118,7 +118,7 @@ body {
 	display: inline-flex;
 	align-items: center;
 	font-size: clamp(0.875rem, 1vw, 1rem);
-	gap: 0.5rem;
+	gap: 0.5em;
 }
 
 .product-category-btn span i {
@@ -130,14 +130,8 @@ body {
 	margin-right: 0;
 	width: 1em;
 	height: 1em;
+	transform: translateY(-0.08em);
 }
-
-.product-category-btn span {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5em;
-}
-
 
 .product-category-btn span i {
 	margin-right: 0;
