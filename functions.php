@@ -51,6 +51,14 @@ function storely_child_enqueue_scripts() {
 			'1.0',
 			true
 		);
+
+		wp_enqueue_script(
+			'adicionar-icone-carrinho-js',
+			get_stylesheet_directory_uri() . '/js/adicionar-icone-carrinho.js',
+			[],
+			'1.0',
+			true
+		);
 	}
 
 	if(is_shop() || is_product()) {
