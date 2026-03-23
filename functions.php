@@ -14,6 +14,7 @@ function storely_child_enqueue_styles() {
 	addStyleToPage('account_page', 'minha-conta');
 	addStyleToPage('shop', 'loja');
 	addStyleToPage('product', 'produto');
+	addStyleToPage('checkout', 'checkout');
 }
 
 // Carrega página dinamicamente, retirando 'if's desnecessários do código
@@ -97,10 +98,6 @@ function storely_child_enqueue_scripts() {
 	}
 }
 
-add_action('wp_enqueue_scripts', 'storely_child_enqueue_styles', 20);
-add_action('wp_enqueue_scripts', 'storely_child_enqueue_scripts');
-add_action('get_header', 'add_top_offer_banner', 5);
-
 function add_top_offer_banner() {
 	if(is_front_page()) {
 		?>
@@ -110,3 +107,13 @@ function add_top_offer_banner() {
 		<?php
 	}
 }
+
+add_action('wp_enqueue_scripts', 'storely_child_enqueue_styles', 20);
+add_action('wp_enqueue_scripts', 'storely_child_enqueue_scripts');
+add_action('get_header', 'add_top_offer_banner', 5);
+add_filter('upload_mimes', function ($mimes) {
+    $mimes['jpg']  = 'image/jpeg';
+    $mimes['jpeg'] = 'image/jpeg';
+    $mimes['png']  = 'image/png';
+    return $mimes;
+});

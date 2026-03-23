@@ -1,0 +1,6 @@
+.fc-sidebar.is-activated,
+.fc-sidebar__inner {
+  position: static !important;
+  top: unset !important;
+  height: auto !important;
+}

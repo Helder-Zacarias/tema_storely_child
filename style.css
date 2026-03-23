@@ -230,8 +230,8 @@ button.header-search-button:hover {
 div.product-single {
 	display: flex !important;
 	flex-direction: column;
-	height: 430.09px;
-	max-height: 430.09px;
+	/* height: 430.09px;
+	max-height: 430.09px; */
 	border-radius: var(--border-radius-default);
 	box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 10px 25px rgba(0,0,0,.15);
 }
@@ -246,6 +246,19 @@ div.product-single-ready {
 	opacity: 1;
 	transition: opacity 0.3s;
 }
+/* ------------------------------------------------------------ */
+
+/*  */
+
+.product-content-outer .product-action {
+	height: 100px;
+}
+
+.product-content .product-action a {
+	margin-top: auto !important;
+}
+
+/* ------------------------------------------------------------ */
 
 /* Altera as cores de texto e background dos botões no modal de carrinho,
 e remove as animações no hover */
