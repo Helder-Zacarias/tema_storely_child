@@ -85,14 +85,19 @@ div.product-img {
 
 .product-action {
 	border: none !important;
+	border-top: 1px solid var(--color-brand) !important;
+	margin-right: 1rem;
+	margin-left: 1rem;
 }
 
 .woocommerce-Price-amount bdi {
 	font-weight: 700 !important;
 }
 
+
 .shopengine_add_to_list_action {
 	margin: 0 !important;
+	border-right: 1px solid var(--color-brand);
 }
 
 .button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
@@ -116,6 +121,10 @@ div.product-img {
 
 .star-rating {
 	display: none !important;
+}
+
+.shopengine_add_to_list_action.shopengine-wishlist.badge.se-btn {
+	font-size: 1rem !important;
 }
 
 .shopengine_add_to_list_action.shopengine-wishlist.badge.se-btn.inactive i,
