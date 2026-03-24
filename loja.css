@@ -36,7 +36,6 @@
 }
 
 .product-single-ready:hover {
-	cursor: pointer;
 	box-shadow: 0 1px 3px rgba(0,0,0,.15), 0 10px 25px rgba(0,0,0,.25);
 }
 
@@ -115,5 +114,11 @@ div.product-img {
 	color: var(--color-brand-active) !important;
 }
 
+.star-rating {
+	display: none !important;
+}
 
-
+.shopengine_add_to_list_action.shopengine-wishlist.badge.se-btn.inactive i,
+.shopengine_add_to_list_action.shopengine-wishlist.badge.se-btn.active i {
+	color: var(--color-brand) !important;
+}

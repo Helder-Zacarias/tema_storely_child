@@ -117,3 +117,10 @@ add_filter('upload_mimes', function ($mimes) {
     $mimes['png']  = 'image/png';
     return $mimes;
 });
+
+add_filter('post_thumbnail_html', function($html, $post_id) {
+    if (get_post_type($post_id) === 'product' && empty($html)) {
+        return '<img src="http://localhost/ecommerce-rede-software/wp-content/uploads/2026/03/produto-sem-imagem.png" alt="Placeholder">';
+    }
+    return $html;
+}, 10, 2);
