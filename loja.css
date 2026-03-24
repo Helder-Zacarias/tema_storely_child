@@ -53,7 +53,7 @@ div.product-img {
 }
 
 .product-img .info {
-	display: none !important;
+	opacity: 0 !important;
 }
 
 .product-content {
