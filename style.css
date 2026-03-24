@@ -214,13 +214,13 @@ button.header-search-button:hover {
 .product-action .add_to_cart_button {
 	width: 150px !important;
 	border-radius: var(--border-radius-default) !important;
-	background-color: var(--color-accent) !important;
+	/* background-color: var(--color-accent) !important; */
 	color: var(--color-text-primary) !important;
 }
 
 .product-action .add_to_cart_button:hover {
 	border-radius: var(--border-radius-default) !important;
-	background-color: var(--color-accent-hover) !important;
+	/* background-color: var(--color-accent-hover) !important; */
 	color: var(--color-text-primary) !important; 
 }
 /* ------------------------------------------------------------ */
@@ -302,7 +302,7 @@ a.cart-ft-btn.cart-ft-btn-cart::after {
 
 .cart-ft-btn.button.btn.btn-primary.cart-ft-btn-cart:hover {
 	border: 1px solid var(--color-bg-surface) !important;
-	background-color: var(--color-accent);
+	/* background-color: var(--color-accent); */
 }
 
 .cart-ft-btn.button.btn.btn-border-secondary.cart-ft-btn-checkout {
