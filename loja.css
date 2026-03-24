@@ -24,3 +24,31 @@
 .wp-post-image {
 	height: 276.08px !important;
 }
+
+.product {
+	height: 512px !important;
+}
+
+.product-single-ready {
+	height: 452px !important;
+	max-height: 452px !important;
+}
+
+.product-img img {
+	width: 200px !important;
+	height: 200px !important;
+}
+
+.product-img .info {
+	display: none  !important;
+}
+
+.product-content h3 {
+	font-size: 1rem !important;
+}
+
+.product-content .price {
+	margin: 0 !important;
+	font-size: 1rem !important;
+	font-weight: bold !important;
+}
