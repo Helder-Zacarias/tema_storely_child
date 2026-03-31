@@ -309,9 +309,6 @@ a.cart-ft-btn.cart-ft-btn-cart::after {
 	transition: background-color 0.5s ease !important;
 }
 
-.cart-ft-btn.button.btn.btn-border-secondary.cart-ft-btn-checkout:hover {
-	background-color: green !important;
-}
 /* ------------------------------------------------------------ */
 
 /* Remove animação da imagem ao passar o mouse */
